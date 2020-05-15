@@ -1,0 +1,139 @@
+footer{
+    background: $primary-color-bg;
+    padding: 3rem 1rem;
+    color:$secondary-color-text;
+    font-weight:normal;
+}
+.footer-up{
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 0;
+    li a{
+        text-decoration: none;
+        margin-right: 3rem;
+        color: $secondary-color-text;
+    }
+    p{
+        font-size: 2.25rem;
+        line-height:3.375rem ;
+    }
+    .icon-phone{
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-right: 1.4375rem;
+    }
+    .icon-mail{
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.75rem;
+    }
+}
+.footer-up-right{
+    img{
+        margin-right: 2rem;
+    }
+}
+.footer-down{
+    justify-content: space-between;
+    align-items: center;
+    .icon-logo{
+        width: 5rem;
+        height: 3.03rem;
+        margin-right: 2.375rem;
+    }
+}
+.footer-down-right{
+    li{
+        margin-right:2rem;
+    }
+}
+
+@media (max-width:992px){
+    .footer-up{
+        li a{       
+            margin-right: 1rem;
+        }
+        p{
+            font-size: 1.25rem;
+            line-height:1.875rem ;
+        }
+        .icon-phone{
+            width: 1.4375rem;
+            height: 1.4375rem;
+            margin-right: 0.75rem;
+        }
+        .icon-mail{
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+        }
+    }
+    .footer-up-right{
+        img{
+            margin-right: 1rem;
+        }
+    }
+    .footer-down{
+        .icon-logo{
+            display: none;
+        }
+    }
+    .footer-down-right{
+        li{
+            margin-right:1.5rem;
+        }
+    }
+}
+
+@media (max-width:767px){
+    .footer-up-left{
+        ul{
+            display: none;
+        }
+    }
+    .footer-up{
+        p{
+            // font-size: 1rem;
+            font-size: 0.25rem;
+            line-height:1.875rem ;
+        }
+        .icon-phone{
+            width: 0.8175rem;
+            height: 0.8175rem;
+            margin-right: 0.5rem;
+        }
+        .icon-mail{
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.3125rem;
+        }
+    }
+    .footer-up-right{
+        img{
+            margin-right: 1rem;
+        }
+    }
+    .footer-down{
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        .icon-logo{
+            // 關掉之後一定要再打開才會出現?
+            display:block;
+            position:absolute;
+            top:50%;
+            left:80%;
+        }
+        p{
+            margin-bottom: 0.5rem;
+        }
+    }
+    .footer-down-right{
+        flex-direction: column;
+        text-align: left;
+        li{
+            margin-bottom:0.5rem;
+        }
+    }
+}

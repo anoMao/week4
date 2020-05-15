@@ -1,0 +1,323 @@
+.banner{
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 840px;
+    justify-content: space-around;
+    align-items: center;
+}
+.banner-word{
+    text-align: right;
+    p{
+        font-size: 2.25rem;
+        line-height: 3.125rem;
+    }
+    h1{
+        font-size: 4rem;
+        line-height: 5.625rem;
+    }
+}
+.proHeart,.classicFrame,.customer,.contact{
+    background:$secondary-color-bg;
+    text-align: center; 
+    padding-bottom: 5rem;
+}
+.proHeart,.classicFrame,.customer,.contact{
+    h2{
+        font-size: 3rem;
+        line-height: 67px;
+        padding: 64px 0px 60px 0px;
+    }
+}
+.service{
+    justify-content: space-between;
+    flex-wrap:wrap;
+    li{
+    width: 23.5%;
+    padding: 16px 37px 24px 37px;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+    h3{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    p{
+        font-size: 1rem;
+        line-height: 2rem;
+        text-align: left;
+    }
+}
+.classicFrame{
+    background: $third-color-bg;
+    img{
+        width: 66%;
+    }
+    h3{
+        width: 34%;
+        // background: #000;
+        font-size: 3rem;
+        line-height: 3.5625rem;
+        font-style: italic;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 1.5rem;
+        img{
+            width: 3rem;
+            height: 3rem;
+            padding-right: 0.5rem;
+        }
+    }
+    li{
+        margin-bottom: 2rem;
+    }
+    li:last-child{
+        margin-bottom: 0px;
+    }
+    .sun{
+        flex-direction: row-reverse;
+        h3{
+            margin-right: 1.5rem;
+        }
+        .chg-img{
+            width: 66%;
+        }
+    }
+}
+.chg-img{
+    position: relative;
+    img{
+        width: 100%;
+    }
+}
+.chg-img::before{
+    content:"";
+    position: absolute;
+    background: url("../images/product-2-color.png");
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-size: contain;
+}
+.chg-img:hover::before{
+    opacity: 1;
+}
+.customer{
+    background:$fourth-color-bg;
+    color:$third-color-text;
+    h2{
+        color:$secondary-color-text;
+    }
+}
+.customer-list{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    h4,p,small{
+        margin-bottom: 1rem;
+    }
+    small{
+        color:$forth-color-text;
+    }
+    li{
+        width: 23.5%;
+        text-align: left;
+    }
+    img{
+        display:block;
+        width: 100%;
+        margin-right: 1.5%;
+    }
+    .card-text{
+        background: $third-color-bg;
+        font-weight:normal;
+        padding: 1rem 1rem;
+    }
+}
+.contact{
+    color:$third-color-text;
+}
+.contact-list{
+    margin: 0 auto;
+    max-width: 49.5rem;
+    // padding: 0px 30%;
+    text-align: left;
+    p{
+        margin-bottom: 1.25rem;
+    }
+    input[type="text"],textarea{
+        width: 100%;
+        margin-top: 0.25rem;
+        margin-bottom: 1rem;
+        padding: 0.875rem 1rem;
+        border: 1px solid #000;
+        background-color: transparent;
+    }
+    textarea{
+        height: 8.5rem;
+    }
+    label{
+        font-size: 0.8rem;
+    }
+    button{
+        margin: 0 auto;
+        display: block;
+        width: 180px;
+        height: 54px;
+        border: 0;
+        cursor: pointer;
+        background:$primary-color-bg;
+        color:$secondary-color-text;
+    }
+    .chkbox{
+        margin-bottom: 3.5rem;
+    }
+}
+.contact-list button:hover{
+    background:$button-mousein;
+}
+
+@media (max-width:992px){
+
+    .banner-word{
+        p{
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+        }
+        h1{
+            font-size: 3rem;
+            line-height: 4.5rem;
+        }
+    }
+
+    .proHeart,.service,.classicFrame,.customer,.contact{
+        h2{
+            font-size: 2rem;
+            padding:40px  0px 32px 0px;
+        }
+    }
+    .service{
+        li{
+            width: 50%;
+            img{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .classicFrame{
+        img{
+            width: 50%;
+        }
+        h3{
+            width: 50%;
+            font-size: 1.5rem;
+            line-height: 2.625rem;
+            margin-right: 0;
+            justify-content: center;
+            img{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        li{
+            margin-bottom: 0.5rem;
+        }
+        li:last-child{
+            margin-bottom: 0px;
+        }
+        .sun{
+            flex-direction: row;
+            h3{
+                margin-right: 0;
+            }
+            .chg-img{   
+                width: 55%;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .customer-list{
+        li{
+            width: 48.5%;
+            margin-bottom: 2rem;
+        }
+    }
+    .contact-list{
+        max-width: 31.125rem;
+        p{
+            margin-bottom: 1rem;
+        }
+    }
+
+}
+@media (max-width:767px){
+    .banner-word{
+        p{
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+        }
+        h1{
+            font-size: 2rem;
+            line-height: 4.5rem;
+        }
+    }
+    .proHeart,.service,.classicFrame,.customer,.contact{
+        h2{
+            font-size: 2rem;
+            line-height: 3rem;
+            padding: 32px 0px 12px 0px
+        }
+    }
+    .service{
+        li{
+            width: 100%;
+            padding: 5% 15%;
+        }
+    }
+    .proHeart,.classicFrame.customer{
+        h2{
+            padding: 2rem 0;
+        }
+    }   
+    .classicFrame{
+        h2{
+            font-size: 2rem;
+        }
+        .list-wrap{
+            position: relative;
+            .list-img{
+                width: 100%;
+            }
+            .list-title{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-65%,-65%);
+                color:$secondary-color-text;
+            }
+        }
+    }
+    .customer-list{
+        li{
+            margin:0 auto;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    .contact-list{
+        max-width: 20.43rem;
+    }
+    .contact-list .chkbox {
+        margin-bottom: 1.25rem;
+    }
+}

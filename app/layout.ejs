@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="./assets/style/all.css">
+    <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?callback=loadGoogleMap"></script>
+    <script>
+        google.maps.event.addDomListener(window,'load',loadGoogleMap); // 啟動 GoogleMap
+
+        function loadGoogleMap(){
+            var center = new google.maps.LatLng(25.052469,121.537942);
+            map = new google.maps.Map(document.getElementById('map_div'),{
+                zoom:15,
+                center:center,
+                mapTypeId:google.maps.MapTypeId.ROADMAP,
+            });
+                var latLng = new google.maps.LatLng(25.052469,121.537942);
+                var marker = new google.maps.Marker({
+                    position : latLng,
+                    title : "台北中山旗艦店",
+                    animation : google.maps.Animation.BOUNCE,
+                    map:map
+                });
+        }
+    </script>
+</head>
+
+<body>
+  <header class="df">
+    <div class="logo">
+        <a href="./index.html">
+            <img src="./assets/images/logo.png" alt="">
+        </a>
+    </div>
+    <ul class="logo-menu df">
+        <li><a href="#">系列鏡框</a></li>
+        <li><a href="./location.html">門市據點</a></li>
+        <li><a href="#">部落格</a></li>
+        <li><a href="#">常見問題</a></li>
+    </ul>   
+  </header>
+  <%- contents %>
+
+  <footer>
+    <div class="footer-up container df">
+        <div class="footer-up-left">
+            <ul class="df">
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">系列鏡框</a></li>
+                <li><a href="#">門市據點</a></li>
+                <li><a href="#">部落格</a></li>
+                <li><a href="#">常見問題</a></li>
+            </ul>
+            <p>
+                <img class="icon-phone" src="./assets/images/icon-phone.svg" alt="">
+                0800-000-000
+            </p>
+            <p>
+                <img class="icon-mail" src="./assets/images/icon-mail.svg" alt="">
+                glasses@business.com
+            </p>
+        </div>
+        <ul class="footer-up-right df">
+            <li><img src="./assets/images/icon-fb.svg" alt=""></li>
+            <li><img src="./assets/images/icon-ig.svg" alt=""></li>
+            <li><img src="./assets/images/icon-line.svg" alt=""></li>
+        </ul>
+    </div>
+    <div class="footer-down container df">
+        <p>
+            <img class="icon-logo" src="./assets/images/logo.png" alt="">
+            Copyright © 2020 Glasses.All rights reserved.
+        </p>
+        <ul class="footer-down-right df">
+            <li>隱私權政策</li>
+            <li>服務條款</li>
+        </ul>
+    </div>
+</footer>
+</body>
+
+</html>

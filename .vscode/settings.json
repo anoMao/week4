@@ -1,0 +1,12 @@
+{
+        "liveSassCompile.settings.formats": [
+            {
+                // 不要壓縮
+                // "format": "compressed",
+                // "extensionName": ".min.css",
+                "extensionName": ".css",
+                "savePath": "/css/"
+            }
+        ]
+    }
+}
